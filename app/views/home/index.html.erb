@@ -1,5 +1,9 @@
-<% @parsed["data"].each do |category| %>
-	<ul>
-		<li><%= category["name"] %></li>
-	</ul>
-<% end %>
+<%= form_tag("/search", method: "get") do %>
+	<%= label_tag ("Budget") %>
+	<%= text_field_tag (:budget) %>
+
+	<%= label_tag ("Country") %>
+	<%= text_field_tag (:country) %>
+
+  <%= submit_tag 'Search!' %>
+<% end -%>
