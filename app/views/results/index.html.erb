@@ -1,8 +1,17 @@
-<%= @costs["data"][-1] %>
+<h1>Country</h1>
+<%= @costs["data"][-1]["country_code"] %>
+
+<h1>Budget</h1>
+<%= @costs["data"][-1]["value_budget"] %>
+
+<h1>Midrange</h1>
+<%= @costs["data"][-1]["value_midrange"] %>
+
+<h1>Luxury</h1>
+<%= @costs["data"][-1]["value_luxury"] %>
 
 <ul>
 	<% @costs["data"].first(12).each do |budget| %>
 	  <li><%= budget %></li>
 	<% end %>
 </ul>
-

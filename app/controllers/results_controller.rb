@@ -1,7 +1,6 @@
 class ResultsController < ApplicationController
 
   def index
-
     @costs = BudgetYourTrip.get_country_average(params[:country])
     @categories = BudgetYourTrip.get_cost_categories
 
