@@ -1,6 +1,6 @@
 class BudgetYourTrip
-  def self.categories
-    url = URI.parse("http://www.budgetyourtrip.com/api/v3/categories")
+  def self.get_country_average(country)
+    url = URI.parse("http://www.budgetyourtrip.com/api/v3/costs/country/" + country)
 
     req = Net::HTTP::Get.new(url.path)
     req.add_field("X-API-KEY", "justin.lamar.martin@gmail.com")

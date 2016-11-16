@@ -1,5 +1,5 @@
-<% @parsed["data"].each do |category| %>
-	<ul>
-		<li><%= category["name"] %></li>
-	</ul>
-<% end %> 
+<%= @parsed["data"][-1] %>
+
+<% @parsed["data"].first(12).each do |key, value| %>
+  <div><%= "#{key}" %> : <%= "#{value}" %></div>
+<% end %>
