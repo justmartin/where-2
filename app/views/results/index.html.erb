@@ -1,17 +1,41 @@
 <h1>Country</h1>
-<%= @costs["data"][-1]["country_code"] %>
+<%= @costs[-1]["country_code"] %> <br>
+
+Days on Budget: <%= @code %> <br>
+Days on Budget: <%= @costs %> <br>
 
 <h1>Budget</h1>
-<%= @costs["data"][-1]["value_budget"] %>
+
+<%= @costs[-1]["value_budget"] %> <br>
+
+<% @costs.first(12).each do |cost| %>
+  <div>
+  	<%= cost["name"] %> <br>
+  	<%= cost["value_budget"] %>
+  </div>
+  <br>
+<% end %>
 
 <h1>Midrange</h1>
-<%= @costs["data"][-1]["value_midrange"] %>
+
+<%= @costs[-1]["value_midrange"] %> <br>
+
+<% @costs.first(12).each do |cost| %>
+  <div>
+  	<%= cost["name"] %> <br>
+  	<%= cost["value_midrange"] %>
+  </div>
+  <br>
+<% end %>
 
 <h1>Luxury</h1>
-<%= @costs["data"][-1]["value_luxury"] %>
 
-<ul>
-	<% @costs["data"].first(12).each do |budget| %>
-	  <li><%= budget %></li>
-	<% end %>
-</ul>
+<%= @costs[-1]["value_luxury"] %> 
+
+<% @costs.first(12).each do |cost| %>
+  <div>
+  	<%= cost["name"] %> <br>
+  	<%= cost["value_luxury"] %>
+  </div>
+  <br>
+<% end %>
