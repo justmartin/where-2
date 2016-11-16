@@ -1,5 +1,8 @@
-<%= @parsed["data"][-1] %>
+<%= @costs["data"][-1] %>
 
-<% @parsed["data"].first(12).each do |key, value| %>
-  <div><%= "#{key}" %> : <%= "#{value}" %></div>
-<% end %>
+<ul>
+	<% @costs["data"].first(12).each do |budget| %>
+	  <li><%= budget %></li>
+	<% end %>
+</ul>
+
