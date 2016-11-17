@@ -1,0 +1,9 @@
+<%= form_tag("/search", method: "get") do %>
+	<%= label_tag ("Budget") %>
+	<%= text_field_tag (:budget) %>
+
+	<%= label_tag ("Country Code") %>
+	<%= text_field_tag (:country) %>
+
+  <%= submit_tag 'Search!' %>
+<% end %>
