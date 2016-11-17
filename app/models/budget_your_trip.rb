@@ -41,7 +41,7 @@ class BudgetYourTrip
     api_call(url)
   end
 
-  private
+  private #=====================================================
 
   def self.api_call(url)
     req = Net::HTTP::Get.new(url.path)

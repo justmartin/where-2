@@ -1,5 +1,5 @@
 <h1>Country</h1>
-<%= @costs[-1]["country_code"] %> <br>
+<%= @costs[-1]["name"] %> <br>
 
 <%= @budget %> <br>
 <%= @midrange %> <br>
@@ -7,36 +7,36 @@
 
 <h1>Budget</h1>
 
-<%= @costs[-1]["value_budget"] %> <br>
+<%= @costs[-1]["value_budget"].to_f.round(2)  %> <br>
 
 <% @costs.first(12).each do |cost| %>
   <div>
   	<%= cost["name"] %> <br>
-  	<%= cost["value_budget"] %>
+  	<%= cost["value_budget"].to_f.round(2) %>
   </div>
   <br>
 <% end %>
 
 <h1>Midrange</h1>
 
-<%= @costs[-1]["value_midrange"] %> <br>
+<%= @costs[-1]["value_midrange"].to_f.round(2)  %> <br>
 
 <% @costs.first(12).each do |cost| %>
   <div>
   	<%= cost["name"] %> <br>
-  	<%= cost["value_midrange"] %>
+  	<%= cost["value_midrange"].to_f.round(2)  %>
   </div>
   <br>
 <% end %>
 
 <h1>Luxury</h1>
 
-<%= @costs[-1]["value_luxury"] %> 
+<%= @costs[-1]["value_luxury"].to_f.round(2)  %> 
 
 <% @costs.first(12).each do |cost| %>
   <div>
   	<%= cost["name"] %> <br>
-  	<%= cost["value_luxury"] %>
+  	<%= cost["value_luxury"].to_f.round(2)  %>
   </div>
   <br>
 <% end %>
