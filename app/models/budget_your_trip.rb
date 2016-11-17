@@ -17,6 +17,14 @@ class BudgetYourTrip
     api_call(url)
   end
 
+  def self.get_currency_symbol(currency_code)
+    url = URI.parse("http://www.budgetyourtrip.com/api/v3/currencies/" + currency_code)
+
+    api_call(url)
+  end
+
+  #============================================================
+
   def self.days_on_budget(budget, currency_code, country_budget)
     country_budget_usd = convert_to_usd(currency_code, country_budget)
 
