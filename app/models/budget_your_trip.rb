@@ -17,18 +17,29 @@ class BudgetYourTrip
     api_call(url)
   end
 
+  def self.days_on_budget(budget, currency_code, country_budget)
+    country_budget_usd = convert_to_usd(currency_code, country_budget)
 
-  # def self.days_on_budget(budget, currency_code, country_budget)
-  #   country_budget_usd = convert_to_usd(currency_code, country_budget)
+    budget.to_i / country_budget_usd["data"]["newAmount"].to_i
+  end
 
-  #   budget.to_i / country_budget_usd["newAmount"]
-  # end
+  def self.days_on_midrange(budget, currency_code, country_budget)
+    country_budget_usd = convert_to_usd(currency_code, country_budget)
 
-  # def self.convert_to_usd(currency_code, amount)
-  #   url = URI.parse("http://www.budgetyourtrip.com/api/v3/currencies/convert/" + currency_code + "/usd/"+ amount)
+    budget.to_i / country_budget_usd["data"]["newAmount"].to_i
+  end
 
-  #   api_call(url)
-  # end
+  def self.days_on_luxury(budget, currency_code, country_budget)
+    country_budget_usd = convert_to_usd(currency_code, country_budget)
+
+    budget.to_i / country_budget_usd["data"]["newAmount"].to_i
+  end
+
+  def self.convert_to_usd(currency_code, amount)
+    url = URI.parse("http://www.budgetyourtrip.com/api/v3/currencies/convert/" + currency_code + "/USD/"+ amount)
+
+    api_call(url)
+  end
 
   private
 
@@ -42,6 +53,5 @@ class BudgetYourTrip
 
     JSON.parse(res.body).to_h
   end
-
 
 end
