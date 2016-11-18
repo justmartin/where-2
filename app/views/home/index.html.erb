@@ -19,7 +19,7 @@
   <%= text_field_tag (:budget) %>
 
   <%= label_tag ("Country Code") %>
-  <%= text_field_tag (:country) %>
+  <%= select_tag "country", options_for_select(@countries) %>
 
   <%= submit_tag 'Search!' %>
 <% end %>

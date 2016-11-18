@@ -1,5 +1,6 @@
 <h1>Country</h1>
 <%= @costs[-1]["name"] %> <br>
+&#36; <%= params[:budget] %> <br>
 
 <%= @budget %> <br>
 <%= @midrange %> <br>
@@ -7,7 +8,7 @@
 
 <h1>Budget</h1>
 
-<%= @costs[-1]["value_budget"].to_f.round(2) %> <br>
+<%= @costs[-1]["symbol"] %> <%= @costs[-1]["value_budget"].to_f.round(2) %> <br>
 
 <% @costs.first(12).each do |cost| %>
   <div>
@@ -19,7 +20,7 @@
 
 <h1>Midrange</h1>
 
-<%= @costs[-1]["value_midrange"].to_f.round(2) %> <br>
+<%= @costs[-1]["symbol"] %> <%= @costs[-1]["value_midrange"].to_f.round(2) %> <br>
 
 <% @costs.first(12).each do |cost| %>
   <div>
@@ -31,7 +32,7 @@
 
 <h1>Luxury</h1>
 
-<%= @costs[-1]["value_luxury"].to_f.round(2) %> 
+<%= @costs[-1]["symbol"] %> <%= @costs[-1]["value_luxury"].to_f.round(2) %> 
 
 <% @costs.first(12).each do |cost| %>
   <div>
