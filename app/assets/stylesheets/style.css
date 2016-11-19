@@ -35,17 +35,20 @@
     0. Added Styles
 -------------------------------------------------------------------*/
 
-.days-header{
-    font-size: 100px;
-}
-
 /*
+COLOR SCHEME
 #8A46BA
 #FC7279
 #FF7B9C
 #FFC019
 #FFFFFF
 */
+
+.days-header{
+    font-size: 100px;
+}
+
+
 
 /*------------------------------------------------------------------
 	1. General Styles

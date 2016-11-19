@@ -19,16 +19,16 @@
           <div class="cloud cloud3"><img src="assets/cloud.png" width="60" height="35"></div>
         </div>
         <h1>Where 2</h1>
-        <h4>How Long You Could Travel For?</h4>
+        <h4>How Long Could You Travel For?</h4>
         <div class="domain-form-holder">
           <%= form_tag("/search", method: "get") do %>
             <div class="container-fluid">
               <div class="row">
                 <div class="col-xs-12 col-md-9 domain-text-holder">
-                  <%= number_field_tag (:budget), "", class: "domain-text" %>
+                  <%= number_field_tag (:budget), "", class: "domain-text", min: 0, placeholder: "$USD" %>
                   <br>
                   <br>
-                  <%= select_tag "country", options_for_select(@countries), class: "domain-text" %>
+                  <%= select_tag "country", options_for_select(@countries), class: "domain-text", prompt: "Select Country" %>
                 </div>
                 <div class="col-xs-12 col-md-3 btn-go-holder">
                   <%= submit_tag 'Explore!', class: "btn-go" %>
