@@ -48,6 +48,10 @@ COLOR SCHEME
     font-size: 100px;
 }
 
+.cost-image{
+    height: 75px;
+}
+
 
 
 /*------------------------------------------------------------------
@@ -755,7 +759,7 @@ COLOR SCHEME
 #pricing .price-holder .number .num-big{
     display: inline-block;
     font-family: 'Montserrat-Bold', sans-serif;
-    font-size: 65px;
+    font-size: 50px;
     color: #ffffff;
 }
 #pricing .price-holder .num-small-holder{
