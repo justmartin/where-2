@@ -1,113 +1,47 @@
-<h1>Country</h1>
-<%= @costs[-1]["name"] %> <br>
-&#36; <%= params[:budget] %> <br>
-
-<%= @budget %> <br>
-<%= @midrange %> <br>
-<%= @luxury %>
-    
 <nav id="mainNav" class="navbar navbar-default navbar-full">
-    <div class="container container-nav">
-        <div style="height: 1px;" aria-expanded="false" class="navbar-collapse collapse" id="bs">
-             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/">Search</a></li>
-            </ul>
-        </div>
+  <div class="container container-nav">
+    <div style="height: 1px;" aria-expanded="false" class="navbar-collapse collapse" id="bs">
+       <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">Search</a></li>
+      </ul>
     </div>
+  </div>
 </nav>
 
 <div id="info" class="container-fluid">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 row-title">
-                <h4>Ready to go in seconds</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-md-3">
-                <div id="info-box1" class="info-box opened-info">
-                    <div class="info-icon"><i class="hroc hroc-business"></i></div>
-                    <div class="info-title">Tangible improvments</div>
-                    <div class="info-circle"><div class="circle-icon"></div></div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-3">
-                <div id="info-box2" class="info-box">
-                    <div class="info-icon"><i class="hroc hroc-transport"></i></div>
-                    <div class="info-title">Fast as rocket</div>
-                    <div class="info-circle"><div class="circle-icon"></div></div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-3">
-                <div id="info-box3" class="info-box">
-                    <div class="info-icon"><i class="hroc hroc-technology"></i></div>
-                    <div class="info-title">Ideas to life</div>
-                    <div class="info-circle"><div class="circle-icon"></div></div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-3">
-                <div id="info-box4" class="info-box">
-                    <div class="info-icon"><i class="hroc hroc-search"></i></div>
-                    <div class="info-title">Discover Hostrocket</div>
-                    <div class="info-circle"><div class="circle-icon"></div></div>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 row-title">
+        <h4>&#36; <%= params[:budget] %> USD in <%= @costs[-1]["name"] %> will last you:</h4>
+      </div>
     </div>
-</div>
-<div id="info-text1" class="container-fluid info-text-holder">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="info-title-icon">
-                    <i class="hroc hroc-business"></i>
-                    <div>Tangible improvments</div>
-                </div>
-                <div class="info-text">
-                At vero eos et quas molestias excepturi sint occaecati cupiditate et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.
-                </div>
-            </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-4">
+        <div id="info-box1" class="info-box">
+          <div class="info-icon"><h1 class="days-header"><%= @budget %></h1></div>
+          <div class="info-title">Days On The Cheap End</div>
         </div>
-    </div>
-</div>
-<div id="info-text2" class="container-fluid info-text-holder info-closed">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="info-title-icon">
-                    <i class="hroc hroc-transport"></i>
-                    <div>Fast as rocket</div>
-                </div>
-                <div class="info-text">
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-et quas molestias excepturi sint occaecati cupiditate.
-                </div>
-            </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div id="info-box2" class="info-box">
+          <div class="info-icon"><h1 class="days-header"><%= @midrange %></h1></div>
+          <div class="info-title">Days On The Mid Range</div>
         </div>
-    </div>
-</div>
-<div id="info-text3" class="container-fluid info-text-holder info-closed">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="info-title-icon">
-                    <i class="hroc hroc-technology"></i>
-                    <div>Ideas to life</div>
-                </div>
-                <div class="info-text">
-                Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-et quas molestias excepturi sint occaecati cupiditate at vero eos et accusamus et iusto odio dignissimos ducimus qui.
-                </div>
-            </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div id="info-box3" class="info-box">
+          <div class="info-icon"><h1 class="days-header"><%= @luxury %></h1></div>
+          <div class="info-title">Days On The High End</div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <div id="pricing" class="container-fluid">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-xs-12 col-sm-12 col-md-4">
                 <div class="plan-box">
                     <div class="plan-box-header color-bg1">
                         <div class="plan-title">Budget</div>
@@ -131,13 +65,10 @@ et quas molestias excepturi sint occaecati cupiditate at vero eos et accusamus e
                           <% end %>
                         </ul>
                     </div>
-                    <div class="plan-box-button">
-                        <a class="color-bg1" href="#">...</a>
-                    </div>
                 </div>
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-xs-12 col-sm-12 col-md-4">
                 <div class="plan-box">
                     <div class="plan-box-header color-bg2">
                         <div class="plan-title">Midrange</div>
@@ -161,13 +92,10 @@ et quas molestias excepturi sint occaecati cupiditate at vero eos et accusamus e
                           <% end %>
                         </ul>
                     </div>
-                    <div class="plan-box-button">
-                        <a class="color-bg2" href="#">...</a>
-                    </div>
                 </div>
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-xs-12 col-sm-12 col-md-4">
                 <div class="plan-box">
                     <div class="plan-box-header color-bg3">
                         <div class="plan-title">Luxury</div>
@@ -191,14 +119,54 @@ et quas molestias excepturi sint occaecati cupiditate at vero eos et accusamus e
                           <% end %>
                         </ul>
                     </div>
-                    <div class="plan-box-button">
-                        <a class="color-bg3" href="#">...</a>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>    
+
+<div id="reasons" class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 row-title">
+                <h4>About These Numbers</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="reason-box">
+                    <h5>The Daily Average</h5>
+                    <p>The daily avererage is calculated using only the following categories: <br>
+                    Accommodation, 
+                    Intercity Transportation, 
+                    Local Transportation,
+                    Food,
+                    Water,
+                    Entertainment,
+                    Communication,
+                    Scams, Robberies, and Mishaps,
+                    Tips and Handouts,
+                    All Inclusive Tours
+                </div>
+                <div class="reason-box">
+                    <h5>Exclusions</h5>
+                    <p>Categories excluded from the total daily average are: <br>
+                    Souvenirs,
+                    Living Expenses,
+                    Visas,
+                    Alcohol,
+                    International Transportation,
+                    Charitable Donations
+                    </p>
+                </div>
+                <div class="reason-box">
+                    <h5>Budget Your Trip</h5>
+                    <p>To learn more about what goes into these numbers and how they are calculated, click <a href="http://www.budgetyourtrip.com/calculations.php">here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div id="footer" class="container-fluid">
     <div class="container">
