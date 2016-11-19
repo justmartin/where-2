@@ -60,7 +60,7 @@
                           <% @costs.first(12).each do |cost| %>   
                             <li class="c-item"><i class="fa fa-check" aria-hidden="true"></i>
                               <%= cost["name"] %>
-                              <%= cost["symbol"] %> <%= cost["value_budget"].to_f.round(2) %>
+                              <span class="pull-right"><%= cost["symbol"] %> <%= cost["value_budget"].to_f.round(2) %></span>
                             </li>
                           <% end %>
                         </ul>
@@ -87,7 +87,7 @@
                           <% @costs.first(12).each do |cost| %>
                             <li class="c-item"><i class="fa fa-check" aria-hidden="true"></i>
                               <%= cost["name"] %> 
-                              <%= cost["symbol"] %> <%= cost["value_midrange"].to_f.round(2) %>
+                              <span class="pull-right"><%= cost["symbol"] %> <%= cost["value_midrange"].to_f.round(2) %></span>
                             </li>
                           <% end %>
                         </ul>
@@ -114,7 +114,7 @@
                           <% @costs.first(12).each do |cost| %>  
                             <li class="c-item"><i class="fa fa-check" aria-hidden="true"></i>
                               <%= cost["name"] %>
-                              <%= cost["symbol"] %> <%= cost["value_luxury"].to_f.round(2) %>
+                              <span class="pull-right"><%= cost["symbol"] %> <%= cost["value_luxury"].to_f.round(2) %></span>
                             </li>
                           <% end %>
                         </ul>

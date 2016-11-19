@@ -25,7 +25,7 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-xs-12 col-md-9 domain-text-holder">
-                  <%= text_field_tag (:budget), "", class: "domain-text" %>
+                  <%= number_field_tag (:budget), "", class: "domain-text" %>
                   <br>
                   <br>
                   <%= select_tag "country", options_for_select(@countries), class: "domain-text" %>
