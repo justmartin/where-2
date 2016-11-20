@@ -1045,7 +1045,9 @@ COLOR SCHEME
     .rocket-animation {
         bottom: 450px;
     }
-
+/*    #info{
+        display: none;
+    }*/
     .info-text-holder,.info-text-holder.info-closed{
         max-height: inherit;
         padding-top: 0px;
