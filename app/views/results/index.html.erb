@@ -1,10 +1,8 @@
 <nav id="mainNav" class="navbar navbar-default navbar-full">
   <div class="container container-nav">
-    <div style="height: 1px;" aria-expanded="false" class="navbar-collapse collapse" id="bs">
-       <ul class="nav navbar-nav navbar-right">
-          <li><a href="/">Search</a></li>
-      </ul>
-    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/">Search</a></li>
+    </ul>
   </div>
 </nav>
 
@@ -39,146 +37,147 @@
 </div>
 
 <div id="pricing" class="container-fluid">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-4">
-                <div class="plan-box">
-                    <div class="plan-box-header color-bg1">
-                        <div class="plan-title">Budget</div> <br>
-                        <img class="cost-image" src="assets/backpack.png"> <br>
-                        <div class="price-holder">
-                            <div class="currency"><%= @costs[-1]["symbol"] %></div>
-                            <div class="number">
-                                <div class="num-big"><%= @costs[-1]["value_budget"].to_f.round(2) %></div>
-                                <div class="num-small-holder">
-                                    <div class="duration">/day</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="plan-box-content">
-                        <ul class="c-list"> 
-                          <% @costs.first(12).each do |cost| %>   
-                            <li class="c-item"><i class="fa fa-check" aria-hidden="true"></i>
-                              <%= cost["name"] %>
-                              <span class="pull-right"><%= cost["symbol"] %> <%= cost["value_budget"].to_f.round(2) %></span>
-                            </li>
-                          <% end %>
-                        </ul>
-                    </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-4">
+        <div class="plan-box">
+          <div class="plan-box-header color-bg1">
+            <div class="plan-title">Budget</div> <br>
+            <img class="cost-image" src="assets/backpack.png"> <br>
+            <div class="price-holder">
+              <div class="currency"><%= @costs[-1]["symbol"] %></div>
+              <div class="number">
+                <div class="num-big"><%= @costs[-1]["value_budget"].to_f.round(2) %></div>
+                <div class="num-small-holder">
+                  <div class="duration">/day</div>
                 </div>
+              </div>
             </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-4">
-                <div class="plan-box">
-                    <div class="plan-box-header color-bg2">
-                        <div class="plan-title">Midrange</div> <br>
-                        <img class="cost-image" src="assets/luggage.png"> <br>
-                        <div class="price-holder">
-                            <div class="currency"><%= @costs[-1]["symbol"] %></div>
-                            <div class="number">
-                                <div class="num-big"><%= @costs[-1]["value_midrange"].to_f.round(2) %></div>
-                                <div class="num-small-holder">
-                                    <div class="duration">/day</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="plan-box-content">
-                        <ul class="c-list"> 
-                          <% @costs.first(12).each do |cost| %>
-                            <li class="c-item"><i class="fa fa-check" aria-hidden="true"></i>
-                              <%= cost["name"] %> 
-                              <span class="pull-right"><%= cost["symbol"] %> <%= cost["value_midrange"].to_f.round(2) %></span>
-                            </li>
-                          <% end %>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-4">
-                <div class="plan-box">
-                    <div class="plan-box-header color-bg3">
-                        <div class="plan-title">Luxury</div> <br>
-                        <img class="cost-image" src="assets/diamond.png"> <br>
-                        <div class="price-holder">
-                            <div class="currency"><%= @costs[-1]["symbol"] %></div>
-                            <div class="number">
-                                <div class="num-big"><%= @costs[-1]["value_luxury"].to_f.round(2) %></div>
-                                <div class="num-small-holder">
-                                  <div class="duration">/day</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="plan-box-content">
-                        <ul class="c-list">  
-                          <% @costs.first(12).each do |cost| %>  
-                            <li class="c-item"><i class="fa fa-check" aria-hidden="true"></i>
-                              <%= cost["name"] %>
-                              <span class="pull-right"><%= cost["symbol"] %> <%= cost["value_luxury"].to_f.round(2) %></span>
-                            </li>
-                          <% end %>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <div class="plan-box-content">
+            <ul class="c-list"> 
+              <% @costs.first(12).each do |cost| %>   
+                <li class="c-item"><i class="fa fa-check" aria-hidden="true"></i>
+                  <%= cost["name"] %>
+                  <span class="pull-right"><%= cost["symbol"] %> <%= cost["value_budget"].to_f.round(2) %></span>
+                </li>
+              <% end %>
+            </ul>
+          </div>
         </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-4">
+        <div class="plan-box">
+          <div class="plan-box-header color-bg2">
+            <div class="plan-title">Midrange</div> <br>
+            <img class="cost-image" src="assets/luggage.png"> <br>
+            <div class="price-holder">
+              <div class="currency"><%= @costs[-1]["symbol"] %></div>
+              <div class="number">
+                <div class="num-big"><%= @costs[-1]["value_midrange"].to_f.round(2) %></div>
+                <div class="num-small-holder">
+                  <div class="duration">/day</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="plan-box-content">
+            <ul class="c-list"> 
+              <% @costs.first(12).each do |cost| %>
+                <li class="c-item"><i class="fa fa-check" aria-hidden="true"></i>
+                  <%= cost["name"] %> 
+                  <span class="pull-right"><%= cost["symbol"] %> <%= cost["value_midrange"].to_f.round(2) %></span>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-4">
+        <div class="plan-box">
+          <div class="plan-box-header color-bg3">
+            <div class="plan-title">Luxury</div> <br>
+            <img class="cost-image" src="assets/diamond.png"> <br>
+            <div class="price-holder">
+              <div class="currency"><%= @costs[-1]["symbol"] %></div>
+              <div class="number">
+                <div class="num-big"><%= @costs[-1]["value_luxury"].to_f.round(2) %></div>
+                <div class="num-small-holder">
+                  <div class="duration">/day</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="plan-box-content">
+            <ul class="c-list">  
+              <% @costs.first(12).each do |cost| %>  
+                <li class="c-item"><i class="fa fa-check" aria-hidden="true"></i>
+                  <%= cost["name"] %>
+                  <span class="pull-right"><%= cost["symbol"] %> <%= cost["value_luxury"].to_f.round(2) %></span>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>    
 
 <div id="reasons" class="container-fluid">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 row-title">
-                <h4>About These Numbers</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-12">
-                <div class="reason-box">
-                    <h5>The Daily Average</h5>
-                    <p>The daily avererage is calculated using only the following categories: <br>
-                    Accommodation, 
-                    Intercity Transportation, 
-                    Local Transportation,
-                    Food,
-                    Water,
-                    Entertainment,
-                    Communication,
-                    Scams, Robberies, and Mishaps,
-                    Tips and Handouts,
-                    All Inclusive Tours
-                </div>
-                <div class="reason-box">
-                    <h5>Exclusions</h5>
-                    <p>Categories excluded from the total daily average are: <br>
-                    Souvenirs,
-                    Living Expenses,
-                    Visas,
-                    Alcohol,
-                    International Transportation,
-                    Charitable Donations
-                    </p>
-                </div>
-                <div class="reason-box">
-                    <h5>Budget Your Trip</h5>
-                    <p>To learn more about what goes into these numbers and how they are calculated, click <span id="byt-link"><a href="http://www.budgetyourtrip.com/calculations.php">here</a></span></p>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 row-title">
+        <h4>About These Numbers</h4>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12">
+        <div class="reason-box">
+          <h5>The Daily Average</h5>
+          <p>The daily avererage is calculated using only the following categories: <br>
+            Accommodation, 
+            Intercity Transportation, 
+            Local Transportation,
+            Food,
+            Water,
+            Entertainment,
+            Communication,
+            Scams, Robberies, and Mishaps,
+            Tips and Handouts,
+            All Inclusive Tours
+          </p>
+        </div>
+          <div class="reason-box">
+            <h5>Exclusions</h5>
+            <p>Categories excluded from the total daily average are: <br>
+            Souvenirs,
+            Living Expenses,
+            Visas,
+            Alcohol,
+            International Transportation,
+            Charitable Donations
+            </p>
+          </div>
+          <div class="reason-box">
+            <h5>Budget Your Trip</h5>
+            <p>To learn more about what goes into these numbers and how they are calculated, click <span id="byt-link"><a href="http://www.budgetyourtrip.com/calculations.php">here</a></span></p>
+          </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div id="footer" class="container-fluid">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 row-title">
-                <h4>...</h4>
-                <h5>Created by Justin<br>
-                    Powered by BudgetYourTrip.</h5>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 row-title">
+        <h4>...</h4>
+        <h5>Created by Justin<br>
+            Powered by BudgetYourTrip.</h5>
+      </div>
     </div>
+  </div>
 </div>
