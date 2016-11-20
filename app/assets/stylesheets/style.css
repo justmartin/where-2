@@ -37,21 +37,25 @@
 
 /*
 COLOR SCHEME
-#8A46BA
-#FC7279
-#FF7B9C
-#FFC019
-#FFFFFF
+#34373D dark grey
+#16F7D9 teal
+#536C84 gray-blue
+#FFE854 yellow
+#FFFFFF white
 */
 
 .days-header{
     font-size: 100px;
+    color: #16F7D9;
 }
 
 .cost-image{
     height: 75px;
 }
 
+.yellow-text{
+    color: #FFE854;
+}
 
 
 /*------------------------------------------------------------------
@@ -66,13 +70,22 @@ COLOR SCHEME
 }
 
 .color-bg1{
-    background-color: #FC7279;
+    background-color: #16F7D9;
+    background-image: url('/assets/budget-travel.jpg');
+    background-position: center;
+    background-size: cover;
 }
 .color-bg2{
-    background-color: #FF7B9C;
+    background-color: #536C84;
+    background-image: url('/assets/midrange-travel2.jpg');
+    background-position: center;
+    background-size: cover;
 }
 .color-bg3{
-    background-color: #FFC019;
+    background-color: #FFE854;
+    background-image: url('/assets/luxury-travel.jpg');
+    background-position: center;
+    background-size: cover;
 }
 .color-bg4{
     background-color: #fba206;
@@ -93,7 +106,7 @@ COLOR SCHEME
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: #ffffff;
+    color: #34373D;
     opacity: 0.5;
     text-transform: uppercase;
     font-size: 14px;
@@ -102,7 +115,7 @@ COLOR SCHEME
 }
 
 .navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>li>a:focus {
-    color: #ffffff;
+    color: #536C84;
     opacity: 1;
 }
 
@@ -168,10 +181,10 @@ COLOR SCHEME
 -------------------------------------------------------------------*/
 #top-content{
     background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(bottom right, #FF7B9C, #FFC019); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom right, #FF7B9C, #FFC019); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom right, #FF7B9C, #FFC019); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom right, #FF7B9C, #FFC019);
+    background: -webkit-linear-gradient(bottom right, #34373D, #16F7D9); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #34373D, #16F7D9); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #34373D, #16F7D9); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #34373D, #16F7D9);
     overflow: hidden;
 }
 
@@ -185,7 +198,7 @@ COLOR SCHEME
 
 #top-content h4{
     font-size: 20px;
-    color: #8A46BA;
+    color: #FFE854;
 }
 
 .domain-form-holder{
@@ -211,7 +224,7 @@ COLOR SCHEME
     border: 0;
     border-radius: 8px;
     background-color: #fff;
-    color: #8A46BA;
+    color: #a9a9a9;
     font-size: 23px;
     width: 100%;
     padding: 8px 20px 8px 46px;
@@ -242,9 +255,9 @@ COLOR SCHEME
     text-transform: capitalize;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#79d156+0,79d156+50,075b7a+50,075b7a+100 */
     background: #79d156; /* Old browsers */
-    background: -moz-linear-gradient(top,  #8A46BA 0%, #8A46BA 50%, #FC7279 50%, #FC7279 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #8A46BA 0%,#8A46BA 50%,#FC7279 50%,#FC7279 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #8A46BA 0%,#8A46BA 50%,#FC7279 50%,#FC7279 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: -moz-linear-gradient(top,  #34373D 0%, #34373D 50%, #FFE854 50%, #FFE854 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #34373D 0%,#34373D 50%,#FFE854 50%,#FFE854 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #34373D 0%,#34373D 50%,#FFE854 50%,#FFE854 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8A46BA', endColorstr='#FC7279',GradientType=0 ); /* IE6-9 */
 
     background-size: 100% 200%;
@@ -376,7 +389,7 @@ COLOR SCHEME
 	4. Info Styles
 -------------------------------------------------------------------*/
 #info{
-    background-color: #8A46BA;
+    background-color: #34373D;
     padding-top: 40px;
     padding-bottom: 40px;
     text-align: center;
@@ -825,7 +838,7 @@ COLOR SCHEME
 	8. Reasons Styles
 -------------------------------------------------------------------*/
 #reasons{
-    background-color: #697b91;
+    background-color: #34373D;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -846,7 +859,7 @@ COLOR SCHEME
     font-size: 15px;
 }
 #reasons .reason-box:hover h5{
-    color: #79d156;
+    color: #16F7D9;
 }
 #reasons p{
     color: #ffffff;

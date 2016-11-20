@@ -12,7 +12,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 row-title">
-        <h4>&#36; <%= params[:budget] %> USD in <%= @costs[-1]["name"] %> will last you:</h4>
+        <h4>&#36; <span class="yellow-text"><%= params[:budget] %></span> USD in <span class="yellow-text"><%= @costs[-1]["name"] %></span> will last you: </h4>
       </div>
     </div>
     <div class="row">
@@ -164,7 +164,7 @@
                 </div>
                 <div class="reason-box">
                     <h5>Budget Your Trip</h5>
-                    <p>To learn more about what goes into these numbers and how they are calculated, click <a href="http://www.budgetyourtrip.com/calculations.php">here</a></p>
+                    <p>To learn more about what goes into these numbers and how they are calculated, click <span id="byt-link"><a href="http://www.budgetyourtrip.com/calculations.php">here</a></span></p>
                 </div>
             </div>
         </div>
