@@ -1,24 +1,21 @@
-# README
+# Where 2
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## How To Launch
 
-Things you may want to cover:
+Clone repository and cd into project's directory
 
-* Ruby version
+Run 'rails s'
 
-* System dependencies
+Visit 'http://localhost:3000/'
 
-* Configuration
+From here, you can enter an amount in USD. This serves as the user's budget for days calculations.
+You will also select a location from the dropdown of available countries. 
+Then click 'Explore'.
 
-* Database creation
+## How Data Is Collected
 
-* Database initialization
+Travel costs are collected from the BudgetYourTrip api. Amounts are taken from real travelers who have signed up to use the service. 
 
-* How to run the test suite
+Costs are broken down into 3 categories: Budget, Midrange, and Luxury. The number of days a user could last is calculated based on the user budget divided by the daily cost of each category. Information about what is included in daily cost can be found below the price cards.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+For more info visit: http://www.budgetyourtrip.com/calculations.php

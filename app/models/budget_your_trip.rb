@@ -2,25 +2,25 @@ class BudgetYourTrip
   def self.get_country_average_costs(country)
     url = URI.parse("http://www.budgetyourtrip.com/api/v3/costs/country/" + country)
 
-    api_call(url)
+    request_country_info(url)
   end
 
   def self.get_cost_categories
     url = URI.parse("http://www.budgetyourtrip.com/api/v3/categories")
 
-    api_call(url)
+    request_country_info(url)
   end
 
   def self.get_currency_code(country_code)
     url = URI.parse("http://www.budgetyourtrip.com/api/v3/countries/" + country_code)
 
-    api_call(url)
+    request_country_info(url)
   end
 
   def self.get_currency_symbol(currency_code)
     url = URI.parse("http://www.budgetyourtrip.com/api/v3/currencies/" + currency_code)
 
-    api_call(url)
+    request_country_info(url)
   end
 
   #============================================================
@@ -34,12 +34,12 @@ class BudgetYourTrip
   def self.convert_to_usd(currency_code, amount)
     url = URI.parse("http://www.budgetyourtrip.com/api/v3/currencies/convert/" + currency_code + "/USD/"+ amount)
 
-    api_call(url)
+    request_country_info(url)
   end
 
   private #=====================================================
 
-  def self.api_call(url)
+  def self.request_country_info(url)
     req = Net::HTTP::Get.new(url.path)
     req.add_field("X-API-KEY", "justin.lamar.martin@gmail.com")
 
