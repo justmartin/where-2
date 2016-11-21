@@ -1,4 +1,7 @@
+require "json"
+
 class BudgetYourTrip
+
   def self.get_country_average_costs(country)
     url = URI.parse("http://www.budgetyourtrip.com/api/v3/costs/country/" + country)
 
