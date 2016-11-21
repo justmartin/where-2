@@ -45,9 +45,9 @@
             <div class="plan-title">Budget</div> <br>
             <img class="cost-image" src="assets/backpack.png"> <br>
             <div class="price-holder">
-              <div class="currency"><%= @costs[-1]["symbol"] %></div>
+              <div class="currency">&#36;</div>
               <div class="number">
-                <div class="num-big"><%= @costs[-1]["value_budget"].to_f.round(2) %></div>
+                <div class="num-big"><%= BudgetYourTrip.convert_to_usd(@costs[-1]["currency_code"], @costs[-1]["value_budget"])["data"]["newAmount"].to_f.round(2) %></div>
                 <div class="num-small-holder">
                   <div class="duration">/day</div>
                 </div>
@@ -56,10 +56,12 @@
           </div>
           <div class="plan-box-content">
             <ul class="c-list"> 
-              <% @costs.first(12).each do |cost| %>   
+              <% @costs.first(12).each do |cost| %>
                 <li class="c-item"><i class="fa fa-check" aria-hidden="true"></i>
                   <%= cost["name"] %>
-                  <span class="pull-right"><%= cost["symbol"] %> <%= cost["value_budget"].to_f.round(2) %></span>
+                  <span class="pull-right">
+                    &#36;<%= BudgetYourTrip.convert_to_usd(cost["currency_code"], cost["value_budget"])["data"]["newAmount"].to_f.round(2) %>
+                  </span>
                 </li>
               <% end %>
             </ul>
@@ -73,9 +75,9 @@
             <div class="plan-title">Midrange</div> <br>
             <img class="cost-image" src="assets/luggage.png"> <br>
             <div class="price-holder">
-              <div class="currency"><%= @costs[-1]["symbol"] %></div>
+              <div class="currency">&#36;</div>
               <div class="number">
-                <div class="num-big"><%= @costs[-1]["value_midrange"].to_f.round(2) %></div>
+                <div class="num-big"><%= BudgetYourTrip.convert_to_usd(@costs[-1]["currency_code"], @costs[-1]["value_midrange"])["data"]["newAmount"].to_f.round(2) %></div>
                 <div class="num-small-holder">
                   <div class="duration">/day</div>
                 </div>
@@ -87,7 +89,9 @@
               <% @costs.first(12).each do |cost| %>
                 <li class="c-item"><i class="fa fa-check" aria-hidden="true"></i>
                   <%= cost["name"] %> 
-                  <span class="pull-right"><%= cost["symbol"] %> <%= cost["value_midrange"].to_f.round(2) %></span>
+                  <span class="pull-right">
+                    &#36;<%= BudgetYourTrip.convert_to_usd(cost["currency_code"], cost["value_midrange"])["data"]["newAmount"].to_f.round(2) %>
+                  </span>
                 </li>
               <% end %>
             </ul>
@@ -101,9 +105,9 @@
             <div class="plan-title">Luxury</div> <br>
             <img class="cost-image" src="assets/diamond.png"> <br>
             <div class="price-holder">
-              <div class="currency"><%= @costs[-1]["symbol"] %></div>
+              <div class="currency">&#36;</div>
               <div class="number">
-                <div class="num-big"><%= @costs[-1]["value_luxury"].to_f.round(2) %></div>
+                <div class="num-big"><%= BudgetYourTrip.convert_to_usd(@costs[-1]["currency_code"], @costs[-1]["value_luxury"])["data"]["newAmount"].to_f.round(2) %></div>
                 <div class="num-small-holder">
                   <div class="duration">/day</div>
                 </div>
@@ -115,7 +119,9 @@
               <% @costs.first(12).each do |cost| %>  
                 <li class="c-item"><i class="fa fa-check" aria-hidden="true"></i>
                   <%= cost["name"] %>
-                  <span class="pull-right"><%= cost["symbol"] %> <%= cost["value_luxury"].to_f.round(2) %></span>
+                  <span class="pull-right">
+                    &#36;<%= BudgetYourTrip.convert_to_usd(cost["currency_code"], cost["value_luxury"])["data"]["newAmount"].to_f.round(2) %>
+                  </span>
                 </li>
               <% end %>
             </ul>
