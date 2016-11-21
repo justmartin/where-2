@@ -28,7 +28,7 @@
                   <%= number_field_tag (:budget), "", class: "domain-text", min: 0, placeholder: "$USD" %>
                   <br>
                   <br>
-                  <%= select_tag "country", options_for_select(@countries), class: "domain-text", prompt: "Select Country" %>
+                  <%= select_tag "country", options_for_select(Countries.CountryList), class: "domain-text", prompt: "Select Country" %>
                 </div>
                 <div class="col-xs-12 col-md-3 btn-go-holder">
                   <%= submit_tag 'Explore!', class: "btn-go" %>
