@@ -14,10 +14,10 @@ class ResultsController < ApplicationController
     end
 
     # merge to get currency code into costs for conversion to usd
-    @costs.each { |cost| cost.reverse_merge!(@code["data"])}
+    @costs.each { |cost| cost.reverse_merge!(@code["data"]) }
 
     # merge to get currency symbol into costs
-    @costs.each { |cost| cost.reverse_merge!(@symbol["data"])}
+    @costs.each { |cost| cost.reverse_merge!(@symbol["data"]) }
 
     @budget = BudgetYourTrip.days_on_budget(params[:budget], @costs[-1]["currency_code"], @costs[-1]["value_budget"])
     @midrange = BudgetYourTrip.days_on_budget(params[:budget], @costs[-1]["currency_code"], @costs[-1]["value_midrange"])

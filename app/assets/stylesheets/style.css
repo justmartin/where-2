@@ -71,21 +71,12 @@ COLOR SCHEME
 
 .color-bg1{
     background-color: #16F7D9;
-    background-image: url('/assets/budget-travel.jpg');
-    background-position: center;
-    background-size: cover;
 }
 .color-bg2{
     background-color: #536C84;
-    background-image: url('/assets/midrange-travel.jpg');
-    background-position: center;
-    background-size: cover;
 }
 .color-bg3{
     background-color: #FFE854;
-    background-image: url('/assets/luxury-travel.jpg');
-    background-position: center;
-    background-size: cover;
 }
 .color-bg4{
     background-color: #fba206;
