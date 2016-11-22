@@ -22,6 +22,8 @@ class ResultsController < ApplicationController
     @budget = BudgetYourTrip.days_on_budget(params[:budget], @costs[-1]["currency_code"], @costs[-1]["value_budget"])
     @midrange = BudgetYourTrip.days_on_budget(params[:budget], @costs[-1]["currency_code"], @costs[-1]["value_midrange"])
     @luxury = BudgetYourTrip.days_on_budget(params[:budget], @costs[-1]["currency_code"], @costs[-1]["value_luxury"])
+
+    byebug
   end
   
 end
