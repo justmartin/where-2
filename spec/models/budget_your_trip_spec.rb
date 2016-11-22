@@ -38,22 +38,38 @@ describe BudgetYourTrip do
   end
 
   describe ".get_country_average_costs" do
-    it "retrieves daily average for budget/midrange/luxury" do
+    it "gets daily average for budget/midrange/luxury" do
       country = "TH"
 
       expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_budget"]).to eq "660.84723802611"
     end
 
-    it "retrieves daily average for budget/midrange/luxury" do
+    it "gets daily average for budget/midrange/luxury" do
       country = "TH"
 
       expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_midrange"]).to eq "1804.722688247" 
     end
 
-    it "retrieves daily average for budget/midrange/luxury" do
+    it "gets daily average for budget/midrange/luxury" do
       country = "TH"
 
       expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_luxury"]).to eq "5323.9282342373"
+    end
+  end
+
+  describe ".get_currency_code" do
+    it "gets currency code for given country" do
+      country = "TH"
+
+      expect(BudgetYourTrip.get_currency_code(country)["data"]["currency_code"]).to eq "THB" 
+    end
+  end
+
+  describe ".get_currency_symbol" do
+    it "gets currency symbol for given currency code" do
+      country_code = "THB"
+
+      expect(BudgetYourTrip.get_currency_symbol(country_code)["data"]["symbol"]).to eq "B"
     end
   end
 
