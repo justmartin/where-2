@@ -217,11 +217,13 @@ COLOR SCHEME
     background-color: #fff;
     color: #a9a9a9;
     font-size: 23px;
-    width: 100%;
+    width: 45%;
+    height: 45px;
     padding: 8px 20px 8px 46px;
     outline: 0;
     text-align: center;
     text-align-last:center;
+    display: inline-block;
 }
 
 .domain-text-holder .hroc{
@@ -240,7 +242,7 @@ COLOR SCHEME
     background-color: #8A46BA;
     font-size: 23px;
     color: #fff;
-    width: 100%;
+    width: 50%;
     padding: 8px 20px;
     outline: 0;
     text-transform: capitalize;
@@ -1082,6 +1084,17 @@ COLOR SCHEME
         margin-top: 0;
     }
 }
+
+@media (max-width: 520px) {
+    .btn-go{
+        width: 100%;
+    }
+
+    .domain-text{
+        width: 100%;
+    }
+}
+
 @media (max-width: 480px) {
     #testimonials .testimonial-slide .slide-content{
         padding-left: 40px;
@@ -1090,4 +1103,5 @@ COLOR SCHEME
     #pricing .plan-box.best-seller{
         margin-top: 0;
     }
+
 }

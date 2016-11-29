@@ -24,13 +24,10 @@
           <%= form_tag("/search", method: "get") do %>
             <div class="container-fluid">
               <div class="row">
-                <div class="col-xs-12 col-md-9 domain-text-holder">
-                  <%= number_field_tag (:budget), "", class: "domain-text", min: 0, placeholder: "$USD" %>
+                <div class="col-xs-12 col-md-12 domain-text-holder">
+                  <%= number_field_tag (:budget), "", class: "domain-text input-box", min: 0, placeholder: "$USD" %>
+                  <%= select_tag "country", options_for_select(Countries.CountryList), class: "domain-text input-box", prompt: "Select Country" %>
                   <br>
-                  <br>
-                  <%= select_tag "country", options_for_select(Countries.CountryList), class: "domain-text", prompt: "Select Country" %>
-                </div>
-                <div class="col-xs-12 col-md-3 btn-go-holder">
                   <%= submit_tag 'Explore!', class: "btn-go" %>
                 </div>
               </div>
