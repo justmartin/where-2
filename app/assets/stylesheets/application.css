@@ -20,3 +20,15 @@
  	margin-right: 10px;
  	margin-bottom: 20px;
  }
+
+.color-override-background {
+  background-color: #ffffff !important;
+}
+
+.color-override-header {
+	color: #34373D !important;
+}
+
+.color-override-info-title {
+	color: #34373D !important;
+}

@@ -257,15 +257,8 @@ COLOR SCHEME
     background-position: 0% 0%;
     
     transition: all 0.3s cubic-bezier(1, .02, 0, .99) 0.0s;
-
-    /*
-    #8A46BA
-    #FC7279
-    #FF7B9C
-    #FFC019
-    #FFFFFF
-    */
 }
+
 .btn-go:hover,.btn-go:focus{
     background-position: 0% 100%;
     color: #fff;
@@ -399,21 +392,21 @@ COLOR SCHEME
 }
 #info .info-box .hroc{
     font-size: 90px;
-    color: #5a7392;
+    color: #34373D;
 }
 #info .info-box.opened-info .hroc,
 #info .info-box:hover .hroc,
 #info .info-box:focus .hroc{
-    color: #79d156;
+    color: #16F7D9;
 }
 #info .info-box .fa{
     font-size: 90px;
-    color: #5a7392;
+    color: #34373D;
 }
 #info .info-box.opened-info .fa,
 #info .info-box:hover .fa,
 #info .info-box:focus .fa{
-    color: #79d156;
+    color: #16F7D9;
 }
 #info .info-box img{
     width: 100%;
@@ -422,7 +415,7 @@ COLOR SCHEME
 #info .info-box .info-title{
     font-family: 'Montserrat-SemiBold', sans-serif;
     font-size: 15px;
-    color: #879ab0;
+    color: #ffffff;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -439,7 +432,7 @@ COLOR SCHEME
     display: inline-block;
     width: 8px;
     height: 8px;
-    border: 2px solid #79d156;
+    border: 2px solid #16F7D9;
     border-radius: 50px;
     top: 50%;
     left: 50%;
@@ -458,7 +451,7 @@ COLOR SCHEME
 
 .info-text-holder{
     overflow: hidden;
-    background-color: #79d156;
+    background-color: #34373D;
     padding-top: 50px;
     padding-bottom: 50px;
     max-height: 200px;
@@ -940,8 +933,8 @@ COLOR SCHEME
 -------------------------------------------------------------------*/
 #footer{
     background-color: #ffffff;
-    padding-top: 70px;
-    padding-bottom: 90px;
+    padding-top: 30px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
