@@ -463,7 +463,7 @@ COLOR SCHEME
     padding-bottom: 0px;
 }
 .info-text-holder .info-title-icon{
-    background-color: #374b63;
+    background-color: #ffffff;
     padding-bottom: 20px;
     text-align: center;
     display: none;
@@ -481,7 +481,7 @@ COLOR SCHEME
 .info-text-holder .info-title-icon .hroc{
     vertical-align: middle;
     font-size: 70px;
-    color: #79d156;
+    color: #16F7D9;
     margin-bottom: 10px;
 }
 .info-text-holder .info-text{
@@ -1057,6 +1057,15 @@ COLOR SCHEME
     #starting .price-holder {
         text-align: left;
         display: inline-block;
+    }
+
+    .mobile-collapse {
+        display: none !important;
+    }
+
+    .mobile-fa-icon-size {
+        font-size: 70px !important;
+        color: #16F7D9;
     }
 }
 @media (max-width: 768px) {
