@@ -23,7 +23,7 @@ class ResultsController < ApplicationController
     @midrange = BudgetYourTrip.days_on_budget(params[:budget], @costs[-1]["currency_code"], @costs[-1]["value_midrange"])
     @luxury = BudgetYourTrip.days_on_budget(params[:budget], @costs[-1]["currency_code"], @costs[-1]["value_luxury"])
 
-    @list = Flickr.get_country_photos(params[:country])
+    @country_photos = Flickr.get_country_photos(params[:country])
   end
   
 end

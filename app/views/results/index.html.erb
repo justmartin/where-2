@@ -1,29 +1,31 @@
 <style type="text/css">
-  .color-bg1{
+  .color-bg1 {
     background: url(<%= randomized_budget_image %>);
     background-position: center;
     background-size: cover; 
   }
 
-  .color-bg2{
+  .color-bg2 {
     background: url(<%= randomized_midrange_image %>);
     background-position: center;
     background-size: cover; 
   }
 
-  .color-bg3{
+  .color-bg3 {
     background: url(<%= randomized_luxury_image %>);
     background-position: center;
     background-size: cover; 
   }
-</style>
 
-<% @list.first(1).each do |item| %>
-  <li>
-    <%= item.title %>
-    <%= image_tag FlickRaw.url_b(flickr.photos.getInfo(photo_id: item.id)) %>
-  </li>
-<% end %>
+  #info {
+    background: 
+      linear-gradient(
+        rgba(20,20,20, .8), 
+        rgba(20,20,20, .8)),
+        url(<%= FlickRaw.url_b(flickr.photos.getInfo(photo_id: @country_photos.to_a.sample.id)) %>);
+    background-size: cover;
+  }
+</style>
 
 <nav id="mainNav" class="navbar navbar-default navbar-full">
   <div class="container container-nav">
