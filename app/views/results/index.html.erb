@@ -18,17 +18,12 @@
   }
 </style>
 
-<ul>
-  <% @list.first(1).each do |item| %>
-    <li><
-      <%= item.id %>
-      <%= item.title %>
-      <%= image_tag FlickRaw.url_b(flickr.photos.getInfo(photo_id: item.id)) %>
-
-    </li>
-  <% end %>
-</ul>
-
+<% @list.first(1).each do |item| %>
+  <li>
+    <%= item.title %>
+    <%= image_tag FlickRaw.url_b(flickr.photos.getInfo(photo_id: item.id)) %>
+  </li>
+<% end %>
 
 <nav id="mainNav" class="navbar navbar-default navbar-full">
   <div class="container container-nav">

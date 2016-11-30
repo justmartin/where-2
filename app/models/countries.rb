@@ -1,5 +1,5 @@
 class Countries
-  def self.CountryList
+  def self.country_list
     codes = [
       ["Antigua and Barbuda", "AG"],
       ["Argentina", "AR"],
@@ -135,7 +135,7 @@ class Countries
   end
 
   def self.for_code(code)
-      self.CountryList.select { |pair| pair.last == code }.first.first
+      self.country_list.select { |pair| pair.last == code }.first.first
   end
 
 end
