@@ -133,4 +133,9 @@ class Countries
       ["Zimbabwe", "ZW"]
     ]
   end
+
+  def self.for_code(code)
+      self.CountryList.select { |pair| pair.last == code }.first.first
+  end
+
 end

@@ -10,6 +10,8 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'rspec'
+gem 'flickraw', '~> 0.9.9'
+
 
 group :development, :test do
   gem 'byebug', platform: :mri
