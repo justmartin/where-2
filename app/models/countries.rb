@@ -129,8 +129,7 @@ class Countries
       ["US Virgin Islands", "VI"],
       ["Vanautu", "VU"],
       ["Vietnam", "VN"],
-      ["Zambia", "ZM"],
-      ["Zimbabwe", "ZW"]
+      ["Zambia", "ZM"]
     ]
   end
 

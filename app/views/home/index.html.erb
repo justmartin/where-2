@@ -20,8 +20,8 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-xs-12 col-md-12 domain-text-holder">
-                  <%= number_field_tag (:budget), "", class: "domain-text input-box", min: 0, placeholder: "$USD" %>
-                  <%= select_tag "country", options_for_select(Countries.country_list), class: "domain-text input-box", prompt: "Select Country" %>
+                  <%= number_field_tag (:budget), "", class: "domain-text input-box", min: 0, placeholder: "$USD", required: true %>
+                  <%= select_tag "country", options_for_select(Countries.country_list), class: "domain-text input-box", prompt: "Select Country", required: true %>
                   <br>
                   <%= submit_tag 'Explore!', class: "btn-go" %>
                 </div>
