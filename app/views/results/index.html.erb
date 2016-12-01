@@ -76,7 +76,7 @@
             <div class="price-holder">
               <div class="currency">&#36;</div>
               <div class="number">
-                <div class="num-big"><%= BudgetYourTrip.convert_to_usd(@costs[-1]["currency_code"], @costs[-1]["value_budget"])["data"]["newAmount"].to_f.round(2) %></div>
+                <div class="num-big"><%= BudgetYourTrip.convert_to_usd(@costs[-1]["currency_code"], @costs[-1]["value_budget"]) %></div>
                 <div class="num-small-holder">
                   <div class="duration">/day</div>
                 </div>
@@ -89,7 +89,7 @@
                 <li class="c-item"><i class="fa fa-check" aria-hidden="true"></i>
                   <%= cost["name"] %>
                   <span class="pull-right">
-                    &#36;<%= BudgetYourTrip.convert_to_usd(cost["currency_code"], cost["value_budget"])["data"]["newAmount"].to_f.round(2) %>
+                    &#36;<%= BudgetYourTrip.convert_to_usd(cost["currency_code"], cost["value_budget"]) %>
                   </span>
                 </li>
               <% end %>
@@ -106,7 +106,7 @@
             <div class="price-holder">
               <div class="currency">&#36;</div>
               <div class="number">
-                <div class="num-big"><%= BudgetYourTrip.convert_to_usd(@costs[-1]["currency_code"], @costs[-1]["value_midrange"])["data"]["newAmount"].to_f.round(2) %></div>
+                <div class="num-big"><%= BudgetYourTrip.convert_to_usd(@costs[-1]["currency_code"], @costs[-1]["value_midrange"]) %></div>
                 <div class="num-small-holder">
                   <div class="duration">/day</div>
                 </div>
@@ -119,7 +119,7 @@
                 <li class="c-item"><i class="fa fa-check" aria-hidden="true"></i>
                   <%= cost["name"] %> 
                   <span class="pull-right">
-                    &#36;<%= BudgetYourTrip.convert_to_usd(cost["currency_code"], cost["value_midrange"])["data"]["newAmount"].to_f.round(2) %>
+                    &#36;<%= BudgetYourTrip.convert_to_usd(cost["currency_code"], cost["value_midrange"]) %>
                   </span>
                 </li>
               <% end %>
@@ -136,7 +136,7 @@
             <div class="price-holder">
               <div class="currency">&#36;</div>
               <div class="number">
-                <div class="num-big"><%= BudgetYourTrip.convert_to_usd(@costs[-1]["currency_code"], @costs[-1]["value_luxury"])["data"]["newAmount"].to_f.round(2) %></div>
+                <div class="num-big"><%= BudgetYourTrip.convert_to_usd(@costs[-1]["currency_code"], @costs[-1]["value_luxury"]) %></div>
                 <div class="num-small-holder">
                   <div class="duration">/day</div>
                 </div>
@@ -149,7 +149,7 @@
                 <li class="c-item"><i class="fa fa-check" aria-hidden="true"></i>
                   <%= cost["name"] %>
                   <span class="pull-right">
-                    &#36;<%= BudgetYourTrip.convert_to_usd(cost["currency_code"], cost["value_luxury"])["data"]["newAmount"].to_f.round(2) %>
+                    &#36;<%= BudgetYourTrip.convert_to_usd(cost["currency_code"], cost["value_luxury"]) %>
                   </span>
                 </li>
               <% end %>

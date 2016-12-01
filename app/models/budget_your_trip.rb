@@ -1,4 +1,6 @@
 require "json"
+require "money"
+require "eu_central_bank"
 
 class BudgetYourTrip
 
@@ -31,13 +33,15 @@ class BudgetYourTrip
   def self.days_on_budget(budget, currency_code, country_budget)
     country_budget_usd = convert_to_usd(currency_code, country_budget)
 
-    budget.to_i / country_budget_usd["data"]["newAmount"].to_i
+    budget.to_i / (country_budget_usd.fractional.to_i / 100)
   end
 
   def self.convert_to_usd(currency_code, amount)
-    url = URI.parse("http://www.budgetyourtrip.com/api/v3/currencies/convert/" + currency_code + "/USD/"+ amount)
+    # url = URI.parse("http://www.budgetyourtrip.com/api/v3/currencies/convert/" + currency_code + "/USD/"+ amount)
 
-    request_country_info(url)
+    # request_country_info(url)
+
+    EU_BANK.exchange(amount.to_f * 100, currency_code, "USD")
   end
 
   private #=====================================================
