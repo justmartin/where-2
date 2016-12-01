@@ -14,7 +14,7 @@ gem 'flickraw', '~> 0.9.9'
 gem 'pg'
 gem 'money'
 gem 'google_currency'
-
+gem 'underscore-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri

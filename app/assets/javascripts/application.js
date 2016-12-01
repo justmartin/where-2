@@ -13,8 +13,70 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require underscore
 //= require_tree .
 
 $(document).ready(function(){
+
 	$('[data-toggle="tooltip"]').tooltip(); 
+
+	$('#info-box1').click(function(){
+    	$(".budget-plan-box").css('transform','scale(1.02)');
+    	$(".budget-plan-box").css('opacity','1');
+    	$(".midrange-plan-box").css('transform','scale(1.00)');
+    	$(".midrange-plan-box").css('opacity','0.5');
+    	$(".luxury-plan-box").css('transform','scale(1.00)');
+    	$(".luxury-plan-box").css('opacity','0.5');
+	});
+
+	$('#info-box2').click(function(){
+    	$(".midrange-plan-box").css('transform','scale(1.02)');
+    	$(".midrange-plan-box").css('opacity','1');
+    	$(".budget-plan-box").css('transform','scale(1.00)');
+    	$(".budget-plan-box").css('opacity','0.5');
+    	$(".luxury-plan-box").css('transform','scale(1.00)');
+    	$(".luxury-plan-box").css('opacity','0.5');
+	});
+
+	$('#info-box3').click(function(){
+    	$(".luxury-plan-box").css('transform','scale(1.02)');
+    	$(".luxury-plan-box").css('opacity','1');
+    	$(".budget-plan-box").css('transform','scale(1.00)');
+    	$(".budget-plan-box").css('opacity','0.5');
+    	$(".midrange-plan-box").css('transform','scale(1.00)');
+    	$(".midrange-plan-box").css('opacity','0.5');
+	});
+
+	$('#pricing').click(function(){
+		$(".budget-plan-box").css('opacity','1');
+		$(".midrange-plan-box").css('opacity','1');
+		$(".luxury-plan-box").css('opacity','1');
+		$(".budget-plan-box").css('transform','scale(1.00)');
+		$(".midrange-plan-box").css('transform','scale(1.00)');
+		$(".luxury-plan-box").css('transform','scale(1.00)');
+	});
+
+
+	//using _underscore
+	// infoBoxes = [$("#info-box1"), $("#info-box2"), $("#info-box3")]
+
+	// _.each(infoBoxes, function(element, index) {
+	// 	var pricingBoxes = [$(".budget-plan-box"), $(".midrange-plan-box"), $(".luxury-plan-box")]
+
+	// 	element.click(function() {
+	// 		var clickedIndex = infoBoxes.indexOf(element)
+
+	// 		pricingBoxes[clickedIndex].css('transform', 'scale(1.02)')
+	// 		pricingBoxes[clickedIndex].css('opacity', '1')
+
+	// 		var clickedPlanBox = pricingBoxes.slice(0).splice(clickedIndex, 1)
+	// 		pricingBoxes.splice(clickedIndex, 1)
+
+	// 		_.each(pricingBoxes, function(el) {
+	// 			el.css('transform', 'scale(1.0)')
+	// 			el.css('opacity', '0.5')
+	// 	})
+	// 	})
+	// })
+
 });
