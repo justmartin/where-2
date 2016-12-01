@@ -52,9 +52,6 @@ GEM
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
     erubis (2.7.0)
-    eu_central_bank (1.0.1)
-      money (~> 6.7.0)
-      nokogiri (~> 1.6.3)
     execjs (2.7.0)
     ffi (1.9.14)
     flickraw (0.9.9)
@@ -185,7 +182,6 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
-  eu_central_bank
   flickraw (~> 0.9.9)
   google_currency
   jbuilder (~> 2.5)

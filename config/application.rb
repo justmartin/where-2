@@ -3,11 +3,7 @@ require_relative 'boot'
 require 'rails/all'
 require 'money'
 require 'money/bank/google_currency'
-# require "eu_central_bank"
 
-# EU_BANK = EuCentralBank.new
-# Money.default_bank = EU_BANK
-# EU_BANK.update_rates
 Money.default_bank = Money::Bank::GoogleCurrency.new
 
 

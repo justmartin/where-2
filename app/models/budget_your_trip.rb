@@ -1,6 +1,5 @@
 require "json"
 require "money"
-require "eu_central_bank"
 require "money/bank/google_currency"
 
 class BudgetYourTrip
@@ -38,11 +37,6 @@ class BudgetYourTrip
   end
 
   def self.convert_to_usd(currency_code, amount)
-    # url = URI.parse("http://www.budgetyourtrip.com/api/v3/currencies/convert/" + currency_code + "/USD/"+ amount)
-
-    # request_country_info(url)
-
-    # EU_BANK.exchange(amount.to_f * 100, currency_code, "USD")
     Money.new(amount.to_f * 100, currency_code).exchange_to(:USD)
   end
 

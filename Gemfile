@@ -13,7 +13,6 @@ gem 'rspec'
 gem 'flickraw', '~> 0.9.9'
 gem 'pg'
 gem 'money'
-gem 'eu_central_bank'
 gem 'google_currency'
 
 
