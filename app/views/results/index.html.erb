@@ -86,7 +86,7 @@
           <div class="plan-box-content">
             <ul class="c-list"> 
               <% @costs.first(12).each do |cost| %>
-                <li class="c-item"><i class="fa fa-check" aria-hidden="true"></i>
+                <li class="c-item tooltip-color" data-toggle="tooltip" data-placement="bottom" title="<%= cost["description"] %>"><i class="fa fa-check" aria-hidden="true"></i>
                   <%= cost["name"] %>
                   <span class="pull-right">
                     &#36;<%= BudgetYourTrip.convert_to_usd(cost["currency_code"], cost["value_budget"]) %>
@@ -116,7 +116,7 @@
           <div class="plan-box-content">
             <ul class="c-list"> 
               <% @costs.first(12).each do |cost| %>
-                <li class="c-item"><i class="fa fa-check" aria-hidden="true"></i>
+                <li class="c-item tooltip-color" data-toggle="tooltip" data-placement="bottom" title="<%= cost["description"] %>"><i class="fa fa-check" aria-hidden="true"></i>
                   <%= cost["name"] %> 
                   <span class="pull-right">
                     &#36;<%= BudgetYourTrip.convert_to_usd(cost["currency_code"], cost["value_midrange"]) %>
@@ -146,7 +146,7 @@
           <div class="plan-box-content">
             <ul class="c-list">  
               <% @costs.first(12).each do |cost| %>  
-                <li class="c-item"><i class="fa fa-check" aria-hidden="true"></i>
+                <li class="c-item tooltip-color" data-toggle="tooltip" data-placement="bottom" title="<%= cost["description"] %>"><i class="fa fa-check" aria-hidden="true"></i>
                   <%= cost["name"] %>
                   <span class="pull-right">
                     &#36;<%= BudgetYourTrip.convert_to_usd(cost["currency_code"], cost["value_luxury"]) %>

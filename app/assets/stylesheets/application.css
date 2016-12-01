@@ -14,7 +14,7 @@
  *= require_self
  */
 
-
+/*search page*/
  .input-box {
  	margin-left: 10px;
  	margin-right: 10px;
@@ -35,4 +35,13 @@
 
 .home-highlight {
 	color: #FFE854;
+}
+
+/*results page*/
+.tooltip-color + .tooltip > .tooltip-inner {
+  background-color: #34373D; 
+}
+
+.tooltip-color + .tooltip.bottom > .tooltip-arrow {
+  border-bottom: 5px solid #16F7D9;
 }
