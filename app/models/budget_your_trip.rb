@@ -1,6 +1,7 @@
 require "json"
 require "money"
 require "eu_central_bank"
+require "money/bank/google_currency"
 
 class BudgetYourTrip
 
@@ -41,7 +42,8 @@ class BudgetYourTrip
 
     # request_country_info(url)
 
-    EU_BANK.exchange(amount.to_f * 100, currency_code, "USD")
+    # EU_BANK.exchange(amount.to_f * 100, currency_code, "USD")
+    Money.new(amount.to_f * 100, currency_code).exchange_to(:USD)
   end
 
   private #=====================================================

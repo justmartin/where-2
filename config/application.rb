@@ -1,12 +1,15 @@
 require_relative 'boot'
 
 require 'rails/all'
-require "money"
-require "eu_central_bank"
+require 'money'
+require 'money/bank/google_currency'
+# require "eu_central_bank"
 
-EU_BANK = EuCentralBank.new
-Money.default_bank = EU_BANK
-EU_BANK.update_rates
+# EU_BANK = EuCentralBank.new
+# Money.default_bank = EU_BANK
+# EU_BANK.update_rates
+Money.default_bank = Money::Bank::GoogleCurrency.new
+
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.

@@ -60,6 +60,8 @@ GEM
     flickraw (0.9.9)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    google_currency (3.3.0)
+      money (~> 6.7)
     i18n (0.7.0)
     jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -185,6 +187,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   eu_central_bank
   flickraw (~> 0.9.9)
+  google_currency
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
