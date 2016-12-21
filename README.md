@@ -8,7 +8,9 @@ Run 'rails s'
 
 Visit 'http://localhost:3000/'
 
-From here, you can enter an amount in USD. This serves as the user's budget for days calculations.
+## Usage
+
+From home, you can enter an amount in USD. This serves as the user's budget for days calculations.
 You will also select a location from the dropdown of available countries. 
 Then click 'Explore'.
 
