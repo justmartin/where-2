@@ -1,5 +1,7 @@
 # Where 2
 
+Inpsired by my passion for traveling, I created something that answered the question: "How far could my dollar take me in a given country?". 
+
 ## How To Launch
 
 Clone repository and cd into project's directory
@@ -12,7 +14,7 @@ Visit 'http://localhost:3000/'
 
 From home, you can enter an amount in USD. This serves as the user's budget for days calculations.
 You will also select a location from the dropdown of available countries. 
-Then click 'Explore'.
+Then click 'Explore'. On the results page, you'll see how many days your budget will last you depending on if you're a budget, midrange, or luxury traveler. Below the days are sample cost breakdowns per day to get a better idea of where the budget is allocated.
 
 ## How Data Is Collected
 
