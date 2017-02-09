@@ -1,5 +1,7 @@
 require "rspec"
 require_relative "../../app/models/budget_your_trip.rb"
+require "money"
+require "money/bank/google_currency"
 
 describe BudgetYourTrip do
 
@@ -74,84 +76,86 @@ describe BudgetYourTrip do
 
   describe ".convert_to_usd" do
     it "converts currency amounts to usd" do
-      currency_code = "THB"
-      amount = "5323.9282342373"
+      Money.default_bank = Money::Bank::GoogleCurrency.new
 
-      expect(BudgetYourTrip.convert_to_usd(currency_code, amount)["data"]["newAmount"]).to eq 149.96980941513
+      currency_code = "THB"
+      amount = "5886.9272304853"
+
+      expect(BudgetYourTrip.convert_to_usd(currency_code, amount).fractional).to eq 16786
     end
   end
 
   # Portugal tests ===========================================================================
 
-  describe ".get_country_average_costs" do
-    it "gets daily average for budget/midrange/luxury" do
-      country = "PT"
+  # describe ".get_country_average_costs" do
+  #   it "gets daily average for budget/midrange/luxury" do
+  #     country = "PT"
 
-      expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_budget"]).to eq "33.323330248812"
-    end
+  #     expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_budget"]).to eq "33.323330248812"
+  #   end
 
-    it "gets daily average for budget/midrange/luxury" do
-      country = "PT"
+  #   it "gets daily average for budget/midrange/luxury" do
+  #     country = "PT"
 
-      expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_midrange"]).to eq "81.410269438208" 
-    end
+  #     expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_midrange"]).to eq "81.410269438208" 
+  #   end
 
-    it "gets daily average for budget/midrange/luxury" do
-      country = "PT"
+  #   it "gets daily average for budget/midrange/luxury" do
+  #     country = "PT"
 
-      expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_luxury"]).to eq "188.97370600531"
-    end
-  end
+  #     expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_luxury"]).to eq "188.97370600531"
+  #   end
+  # end
 
-  describe ".get_currency_code" do
-    it "gets currency code for given country" do
-      country = "PT"
+  # describe ".get_currency_code" do
+  #   it "gets currency code for given country" do
+  #     country = "PT"
 
-      expect(BudgetYourTrip.get_currency_code(country)["data"]["currency_code"]).to eq "EUR" 
-    end
-  end
+  #     expect(BudgetYourTrip.get_currency_code(country)["data"]["currency_code"]).to eq "EUR" 
+  #   end
+  # end
 
-  describe ".get_currency_symbol" do
-    it "gets currency symbol for given currency code" do
-      country_code = "EUR"
+  # describe ".get_currency_symbol" do
+  #   it "gets currency symbol for given currency code" do
+  #     country_code = "EUR"
 
-      expect(BudgetYourTrip.get_currency_symbol(country_code)["data"]["symbol"]).to eq "&#8364;"
-    end
-  end
+  #     expect(BudgetYourTrip.get_currency_symbol(country_code)["data"]["symbol"]).to eq "&#8364;"
+  #   end
+  # end
 
-  describe ".days_on_budget" do
-    it "calculates number of days for budget" do
-      budget = "1000"
-      currency_code = "EUR"
-      budget_amount = "33.137543575489"
+  # describe ".days_on_budget" do
+  #   it "calculates number of days for budget" do
+  #     budget = "1000"
+  #     currency_code = "EUR"
+  #     budget_amount = "33.137543575489"
 
-      expect(BudgetYourTrip.days_on_budget(budget, currency_code, budget_amount)).to eq 28
-    end
+  #     expect(BudgetYourTrip.days_on_budget(budget, currency_code, budget_amount)).to eq 28
+  #   end
 
-    it "calculates number of days for midrange" do
-      budget = "1000"
-      currency_code = "EUR"
-      midrange_amount = "80.80016743536"
+  #   it "calculates number of days for midrange" do
+  #     budget = "1000"
+  #     currency_code = "EUR"
+  #     midrange_amount = "80.80016743536"
 
-      expect(BudgetYourTrip.days_on_budget(budget, currency_code, midrange_amount)).to eq 11
-    end
+  #     expect(BudgetYourTrip.days_on_budget(budget, currency_code, midrange_amount)).to eq 11
+  #   end
 
-    it "calculates number of days for luxury" do
-      budget = "1000"
-      currency_code = "EUR"
-      luxury_amount = "186.62575236443"
+  #   it "calculates number of days for luxury" do
+  #     budget = "1000"
+  #     currency_code = "EUR"
+  #     luxury_amount = "186.62575236443"
 
-      expect(BudgetYourTrip.days_on_budget(budget, currency_code, luxury_amount)).to eq 5
-    end
-  end
+  #     expect(BudgetYourTrip.days_on_budget(budget, currency_code, luxury_amount)).to eq 5
+  #   end
+  # end
 
-  describe ".convert_to_usd" do
-    it "converts currency amounts to usd" do
-      currency_code = "EUR"
-      amount = "186.62575236443"
+  # describe ".convert_to_usd" do
+  #   it "converts currency amounts to usd" do
+  #     currency_code = "EUR"
+  #     amount = "186.62575236443"
 
-      expect(BudgetYourTrip.convert_to_usd(currency_code, amount)["data"]["newAmount"]).to eq 197.8232975063
-    end
-  end
+  #     expect(BudgetYourTrip.convert_to_usd(currency_code, amount)).to eq 197.8232975063
+  #   end
+  # end
 
 end
