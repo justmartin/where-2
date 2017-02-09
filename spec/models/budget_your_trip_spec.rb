@@ -8,19 +8,19 @@ describe BudgetYourTrip do
     it "gets daily average for budget/midrange/luxury" do
       country = "TH"
 
-      expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_budget"]).to eq "660.84723802611"
+      expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_budget"]).to eq "743.47221460572"
     end
 
     it "gets daily average for budget/midrange/luxury" do
       country = "TH"
 
-      expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_midrange"]).to eq "1804.722688247" 
+      expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_midrange"]).to eq "2017.9768362617" 
     end
 
     it "gets daily average for budget/midrange/luxury" do
       country = "TH"
 
-      expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_luxury"]).to eq "5323.9282342373"
+      expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_luxury"]).to eq "5886.9272304853"
     end
   end
 
@@ -87,19 +87,19 @@ describe BudgetYourTrip do
     it "gets daily average for budget/midrange/luxury" do
       country = "PT"
 
-      expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_budget"]).to eq "33.137543575489"
+      expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_budget"]).to eq "33.323330248812"
     end
 
     it "gets daily average for budget/midrange/luxury" do
       country = "PT"
 
-      expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_midrange"]).to eq "80.80016743536" 
+      expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_midrange"]).to eq "81.410269438208" 
     end
 
     it "gets daily average for budget/midrange/luxury" do
       country = "PT"
 
-      expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_luxury"]).to eq "186.62575236443"
+      expect(BudgetYourTrip.get_country_average_costs(country)["data"][-1]["value_luxury"]).to eq "188.97370600531"
     end
   end
 
