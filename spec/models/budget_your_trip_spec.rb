@@ -5,6 +5,8 @@ require "money/bank/google_currency"
 
 describe BudgetYourTrip do
 
+  Money.default_bank = Money::Bank::GoogleCurrency.new
+
   # Thailand tests ===========================================================================
   describe ".get_country_average_costs" do
     it "gets daily average for budget/midrange/luxury" do
@@ -52,36 +54,34 @@ describe BudgetYourTrip do
     it "calculates number of days for budget/midrange/luxury" do
       budget = "1000"
       currency_code = "THB"
-      budget_amount = "660.84723802611"
+      budget_amount = "743.47221460572"
 
-      expect(BudgetYourTrip.days_on_budget("1000", "THB", "660.84723802611")).to eq 55
+      expect(BudgetYourTrip.days_on_budget(budget, currency_code, budget_amount)).to eq 47
     end
 
     it "calculates number of days for budget/midrange/luxury" do
       budget = "1000"
       currency_code = "THB"
-      midrange_amount = "1804.722688247"
+      midrange_amount = "2017.9768362617"
 
-      expect(BudgetYourTrip.days_on_budget("1000", "THB", "1804.722688247")).to eq 20
+      expect(BudgetYourTrip.days_on_budget(budget, currency_code, midrange_amount)).to eq 17
     end
 
     it "calculates number of days for budget/midrange/luxury" do
       budget = "1000"
       currency_code = "THB"
-      luxury_amount = "5323.9282342373"
+      luxury_amount = "5886.9272304853"
 
-      expect(BudgetYourTrip.days_on_budget("1000", "THB", "5323.9282342373")).to eq 6
+      expect(BudgetYourTrip.days_on_budget(budget, currency_code, luxury_amount)).to eq 5
     end
   end
 
   describe ".convert_to_usd" do
     it "converts currency amounts to usd" do
-      Money.default_bank = Money::Bank::GoogleCurrency.new
-
       currency_code = "THB"
       amount = "5886.9272304853"
 
-      expect(BudgetYourTrip.convert_to_usd(currency_code, amount).fractional).to eq 16786
+      expect(BudgetYourTrip.convert_to_usd(currency_code, amount).fractional).to eq 16801
     end
   end
 
